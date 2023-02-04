@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+neel_plotly/__init__.py
+neel_plotly/plot.py
+neel_plotly.egg-info/PKG-INFO
+neel_plotly.egg-info/SOURCES.txt
+neel_plotly.egg-info/dependency_links.txt
+neel_plotly.egg-info/requires.txt
+neel_plotly.egg-info/top_level.txt
