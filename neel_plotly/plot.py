@@ -32,6 +32,8 @@ def to_numpy(tensor):
         else:
             return to_numpy_ragged_2d(tensor)
     elif isinstance(tensor, (torch.Tensor, torch.nn.parameter.Parameter)):
+        if tensor.dtype == torch.bfloat16:
+            tensor = tensor.float()
         return tensor.detach().cpu().numpy()
     elif type(tensor) in [int, float, bool, str]:
         return np.array(tensor)
