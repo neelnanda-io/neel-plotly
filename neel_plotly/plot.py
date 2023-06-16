@@ -37,6 +37,8 @@ def to_numpy(tensor):
         return tensor.detach().cpu().numpy()
     elif type(tensor) in [int, float, bool, str]:
         return np.array(tensor)
+    elif isinstance(tensor, pd.Series):
+        return tensor.values
     else:
         raise ValueError(f"Input to to_numpy has invalid type: {type(tensor)}")
 
